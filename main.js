@@ -90,7 +90,7 @@ function startGame(str, num) {
   //use while loop
   while (chance != 0 || !hidden.includes("#")) {
     // ask user to enter letter
-    let userInput = prompt("Guess the word");
+    let userInput = prompt("Guess the word").toLocaleLowerCase();
 
     // define boolen var to check user input
     let check = false;
@@ -101,7 +101,7 @@ function startGame(str, num) {
       if (check) {
         break;
       }
-      userInput = prompt("Guess the word");
+      userInput = prompt("Guess the word").toLocaleLowerCase();
     }
 
     // if user finds the letter replace "#" with letter and display word
